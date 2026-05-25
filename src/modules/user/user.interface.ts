@@ -11,3 +11,8 @@ export enum EUserRole {
     owner = "owner",
     admin = "admin",
 }
+
+export interface ILoginUser {
+    email: string;
+    password: string;
+}

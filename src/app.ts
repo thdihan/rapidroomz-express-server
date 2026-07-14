@@ -20,10 +20,14 @@ app.use(
     }),
 );
 
+import { globalErrorHandler } from "./middlewares/globalErrorHandler";
+
 app.use("/api/v1", router);
 
 app.get("/", (req: Request, res: Response) => {
     res.json("Hello World!");
 });
+
+app.use(globalErrorHandler);
 
 export default app;

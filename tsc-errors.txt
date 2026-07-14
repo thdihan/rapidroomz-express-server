@@ -1,0 +1,38 @@
+src/modules/apartment/apartment.controller.ts(45,72): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/modules/apartment/apartment.controller.ts(63,80): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/modules/apartment/apartment.controller.ts(81,72): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/modules/booking/booking.controller.ts(22,57): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/modules/booking/booking.controller.ts(34,58): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/modules/booking/booking.controller.ts(48,61): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/modules/booking/booking.controller.ts(66,65): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/modules/booking/booking.model.ts(11,5): error TS2322: Type '{ type: (typeof Schema.Types.Mixed)[]; default: never[]; }' is not assignable to type 'SchemaDefinitionProperty<any[], IBooking, Document<unknown, {}, IBooking, { id: string; }, DefaultSchemaOptions> & Omit<IBooking & Required<{ _id: ObjectId; }> & { ...; }, "id"> & { ...; }> | undefined'.
+  Types of property 'type' are incompatible.
+    Type '(typeof Mixed)[]' is not assignable to type 'typeof Mixed | AnyArray<ObjectIdSchemaDefinition> | AnyArray<SchemaTypeOptions<ObjectId, IBooking, Document<unknown, {}, IBooking, { ...; }, DefaultSchemaOptions> & Omit<...> & { ...; }>> | undefined'.
+      Type '(typeof Mixed)[]' is not assignable to type 'ObjectIdSchemaDefinition[]'.
+        Type 'typeof Mixed' is not assignable to type 'ObjectIdSchemaDefinition'.
+          Type 'typeof Mixed' is not assignable to type 'typeof ObjectId'.
+            Types of property 'schemaName' are incompatible.
+              Type '"Mixed"' is not assignable to type '"ObjectId"'.
+src/modules/hotel/hotel.controller.ts(31,59): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/modules/hotel/hotel.controller.ts(44,64): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/modules/hotel/hotel.controller.ts(56,56): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/modules/resort/resort.controller.ts(45,66): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/modules/resort/resort.controller.ts(63,71): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/modules/resort/resort.controller.ts(80,63): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/modules/villa/villa.controller.ts(44,64): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/modules/villa/villa.controller.ts(56,56): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.

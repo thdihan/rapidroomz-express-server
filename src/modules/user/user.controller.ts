@@ -26,8 +26,32 @@ const loginUser = catchAsync(async (req: Request, res: Response) => {
     });
 });
 
+const getOwners = catchAsync(async (req: Request, res: Response) => {
+    const owners = await UserService.getOwnersFromDB();
+
+    sendResponse(res, {
+        statusCode: httpStatus.OK,
+        success: true,
+        message: "Owners retrieved successfully.",
+        data: owners,
+    });
+});
+
+const getAllUsers = catchAsync(async (req: Request, res: Response) => {
+    const users = await UserService.getAllUsersFromDB();
+
+    sendResponse(res, {
+        statusCode: httpStatus.OK,
+        success: true,
+        message: "Users retrieved successfully.",
+        data: users,
+    });
+});
+
 const UserController = {
     createUser,
     loginUser,
+    getOwners,
+    getAllUsers,
 };
 export default UserController;

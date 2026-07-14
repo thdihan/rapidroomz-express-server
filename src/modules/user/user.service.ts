@@ -29,9 +29,21 @@ const loginUserFromDB = async (payload: ILoginUser) => {
     return userObj;
 };
 
+const getOwnersFromDB = async () => {
+    const owners = await UserModel.find({ role: "owner" }).select("-password");
+    return owners;
+};
+
+const getAllUsersFromDB = async () => {
+    const users = await UserModel.find().select("-password").sort({ createdAt: -1 });
+    return users;
+};
+
 const UserService = {
     createUserIntoDB,
     loginUserFromDB,
+    getOwnersFromDB,
+    getAllUsersFromDB,
 };
 
 export default UserService;

@@ -4,7 +4,7 @@ FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY package.json pnpm-lock.yaml* ./
-RUN corepack enable pnpm && pnpm i --frozen-lockfile
+RUN corepack enable pnpm && pnpm i
 
 FROM base AS builder
 WORKDIR /app
@@ -23,7 +23,7 @@ RUN adduser --system --uid 1001 expressjs
 COPY --from=builder /app/dist ./dist
 # Copy production dependencies (actually we'll reinstall for prod or copy node_modules)
 COPY package.json pnpm-lock.yaml* ./
-RUN corepack enable pnpm && pnpm i --frozen-lockfile --prod
+RUN corepack enable pnpm && pnpm i --prod
 
 USER expressjs
 

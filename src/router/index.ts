@@ -8,6 +8,7 @@ import { ResortRoute } from "../modules/resort/resort.route";
 import { LocationRoute } from "../modules/location/location.route";
 import { BookingRoute } from "../modules/booking/booking.route";
 import { SearchRoute } from "../modules/search/search.route";
+import { SettingRoute } from "../modules/setting/setting.route";
 
 const router = Router();
 
@@ -47,6 +48,10 @@ const moduleRoute = [
     {
         path: "/search",
         route: SearchRoute,
+    },
+    {
+        path: "/setting",
+        route: SettingRoute,
     },
 ];
 

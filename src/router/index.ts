@@ -9,6 +9,7 @@ import { LocationRoute } from "../modules/location/location.route";
 import { BookingRoute } from "../modules/booking/booking.route";
 import { SearchRoute } from "../modules/search/search.route";
 import { SettingRoute } from "../modules/setting/setting.route";
+import { ContactRoute } from "../modules/contact/contact.route";
 
 const router = Router();
 
@@ -52,6 +53,10 @@ const moduleRoute = [
     {
         path: "/setting",
         route: SettingRoute,
+    },
+    {
+        path: "/contact",
+        route: ContactRoute,
     },
 ];
 

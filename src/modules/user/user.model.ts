@@ -31,6 +31,18 @@ const UserSchema = new Schema<IUser>(
             enum: Object.values(EUserRole),
             default: EUserRole.guest,
         },
+        avatar: {
+            type: String,
+            default: "",
+        },
+        bio: {
+            type: String,
+            default: "",
+        },
+        address: {
+            type: String,
+            default: "",
+        },
     },
     {
         timestamps: true,

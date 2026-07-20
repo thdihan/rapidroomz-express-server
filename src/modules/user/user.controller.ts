@@ -48,10 +48,36 @@ const getAllUsers = catchAsync(async (req: Request, res: Response) => {
     });
 });
 
+const getUserProfile = catchAsync(async (req: Request, res: Response) => {
+    const identifier = (req.params.id as string) || (req.query.email as string) || (req.query.id as string);
+    const user = await UserService.getUserProfileFromDB(identifier);
+
+    sendResponse(res, {
+        statusCode: httpStatus.OK,
+        success: true,
+        message: "User profile retrieved successfully.",
+        data: user,
+    });
+});
+
+const updateUserProfile = catchAsync(async (req: Request, res: Response) => {
+    const identifier = (req.params.id as string) || (req.body.id as string) || (req.body.email as string);
+    const updatedUser = await UserService.updateUserProfileInDB(identifier, req.body);
+
+    sendResponse(res, {
+        statusCode: httpStatus.OK,
+        success: true,
+        message: "User profile updated successfully.",
+        data: updatedUser,
+    });
+});
+
 const UserController = {
     createUser,
     loginUser,
     getOwners,
     getAllUsers,
+    getUserProfile,
+    updateUserProfile,
 };
 export default UserController;
